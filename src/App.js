@@ -16,7 +16,6 @@ function App() {
     <div className="App" style={backgroundImageStyle}>
       <BasicExample />
       <div className="content">
-        <h1>Please Login</h1>
       </div>
       <Form />
     </div>
