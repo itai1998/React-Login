@@ -3,12 +3,18 @@ import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 
 const MyForm = () => {
+
+    let emailPass = '';
+    let passwordPass = '';
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const handleClick = () => {
-        console.log('Email:', email);
-        console.log('Password:', password);
+        emailPass = email;
+        passwordPass = password;
+        console.log('Email:', emailPass);
+        console.log('Password:', passwordPass);
         setEmail('');
         setPassword('');
     }
