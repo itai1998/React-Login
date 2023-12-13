@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.content h1{
+  text-align: center;
+}
+
+.form-container form{
+  border-style: solid;
+  border-width: 1px;
+  background-color: rgb(185, 178, 235);
+  padding: 20px;
+  border-radius: 10px;
+}
