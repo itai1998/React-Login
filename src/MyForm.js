@@ -4,6 +4,14 @@ import { useState } from 'react';
 
 const MyForm = () => {
 
+    const backgroundImageStyle = {
+        backgroundImage: 'url("https://brightspotcdn.byu.edu/dc/d7/c22c23614dd5870f2fcbbd473f06/jango-graduation-emmalee-169.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
+        minHeight: '100vh', 
+      };
+
     let emailPass = '';
     let passwordPass = '';
 
@@ -19,12 +27,8 @@ const MyForm = () => {
         setPassword('');
     }
 
-    const testEvent = (e) =>{
-        console.log(e);
-    }
-
     return ( 
-        <div className="form-container d-flex align-items-center justify-content-center">
+        <div className="form-container d-flex  justify-content-center" style={backgroundImageStyle}>
             <Form>
                 <h6>LOGIN</h6>
                 <br/>
