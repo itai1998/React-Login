@@ -1,28 +1,27 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useState } from 'react';
+import { useState} from 'react';
 
 const MyForm = () => {
-
     const backgroundImageStyle = {
         backgroundImage: 'url("https://brightspotcdn.byu.edu/dc/d7/c22c23614dd5870f2fcbbd473f06/jango-graduation-emmalee-169.jpg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
         minHeight: '100vh', 
-      };
-
-    let emailPass = '';
-    let passwordPass = '';
+    };
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const handleClick = () => {
-        emailPass = email;
-        passwordPass = password;
-        console.log('Email:', emailPass);
-        console.log('Password:', passwordPass);
+
+        if(email === "123@test.com" && password === "123"){
+            console.log('Success Login');
+        }else{
+            console.log('Wrong Input');
+        }
+        
         setEmail('');
         setPassword('');
     }
@@ -34,7 +33,7 @@ const MyForm = () => {
                 <br/>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email </Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" value={email}  onChange={(e) => setEmail(e.target.value)}/>
+                    <Form.Control type="email" placeholder="Enter email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                 </Form.Group>
         
                 <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -49,5 +48,5 @@ const MyForm = () => {
         </div>
     );
 }
- 
+
 export default MyForm;
