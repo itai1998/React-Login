@@ -19,6 +19,10 @@ const MyForm = () => {
         setPassword('');
     }
 
+    const testEvent = (e) =>{
+        console.log(e);
+    }
+
     return ( 
         <div className="form-container d-flex align-items-center justify-content-center">
             <Form>
@@ -26,7 +30,7 @@ const MyForm = () => {
                 <br/>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email </Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" value={email}  onChange={(e) => setEmail(e.target.value)} />
+                    <Form.Control type="email" placeholder="Enter email" value={email}  onChange={(e) => setEmail(e.target.value)}/>
                 </Form.Group>
         
                 <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -34,7 +38,7 @@ const MyForm = () => {
                     <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                 </Form.Group>
                 
-                <Button variant="primary" type="submit" onClick={() => handleClick()}>
+                <Button variant="primary" onClick={() => handleClick()}>
                     LOGIN
                 </Button>
             </Form>
