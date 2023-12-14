@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useState} from 'react';
+import { useState } from 'react';
+import { useHistory } from 'react-router-dom'; // Import useHistory
 
 const MyForm = () => {
     const backgroundImageStyle = {
@@ -14,14 +15,19 @@ const MyForm = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleClick = () => {
+    // Use useHistory hook
+    const history = useHistory();
 
-        if(email === "123@test.com" && password === "123"){
+    const handleClick = () => {
+        if (email === "123@test.com" && password === "123") {
             console.log('Success Login');
-        }else{
+            
+            // Navigate to the '/welcome' route
+            history.push('/welcome');
+        } else {
             console.log('Wrong Input');
         }
-        
+
         setEmail('');
         setPassword('');
     }
