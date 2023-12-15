@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "first_name": "Peter",
+      "last_name": "Lin",
+      "email": "peter@test.com",
+      "password": "peter"
+    },
+    {
+      "id": 2,
+      "first_name": "Tom",
+      "last_name": "Ying",
+      "email": "tom@test.com",
+      "password": "tom"
+    }
+  ]
+}
