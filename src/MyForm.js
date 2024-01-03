@@ -1,7 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import useFetch from './useFetch';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom'; // Import useHistory
+import axios from 'axios';
 
 const MyForm = () => {
     const backgroundImageStyle = {
@@ -21,8 +23,6 @@ const MyForm = () => {
     const handleClick = () => {
         if (email === "123@test.com" && password === "123") {
             console.log('Success Login');
-            
-            // Navigate to the '/welcome' route
             history.push('/welcome');
         } else {
             console.log('Wrong Input');
@@ -30,6 +30,13 @@ const MyForm = () => {
 
         setEmail('');
         setPassword('');
+    };
+
+    const handleSubmit = (event) =>{
+        event.preventDefault();
+        axios.post('http://localhost:8081/login', {email, password})
+        .then(res => console.log(res))
+        .catch(err => console.log(err));
     }
 
     return ( 
@@ -49,6 +56,10 @@ const MyForm = () => {
                 
                 <Button variant="primary" onClick={() => handleClick()}>
                     LOGIN
+                </Button>
+                <p></p>
+                <Button variant="primary" onClick={(event) => handleSubmit(event)}>
+                    LOGIN from API
                 </Button>
             </Form>
         </div>
