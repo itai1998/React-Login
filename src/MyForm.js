@@ -22,23 +22,21 @@ const MyForm = () => {
     // Use useHistory hook
     const history = useHistory();
 
-    const handleClick = () => {
-        if (email === "123@test.com" && password === "123") {
-            console.log('Success Login');
-            history.push('/welcome');
-        } else {
-            console.log('Wrong Input');
-        }
-
-        setEmail('');
-        setPassword('');
-    };
-
     const handleSubmit = (event) =>{
         event.preventDefault();
         axios.post('http://localhost:8081/login', {email, password})
-        .then(res => console.log(res))
+        .then(res => {
+            if(res.data === "Login Successfully"){
+                history.push('/welcome');
+            } else
+            {
+                alert("The Email or the Password is incorrect");
+            }
+        })
         .catch(err => console.log(err));
+
+        setEmail('');
+        setPassword('');
     }
 
     return ( 
@@ -55,13 +53,9 @@ const MyForm = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                 </Form.Group>
-                
-                <Button variant="primary" onClick={() => handleClick()}>
-                    LOGIN
-                </Button>
-                <p></p>
+            
                 <Button variant="primary" onClick={(event) => handleSubmit(event)}>
-                    LOGIN from API
+                    LOGIN
                 </Button>
             </Form>
         </div>
