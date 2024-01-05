@@ -5,6 +5,7 @@ import Welcome from './Welcome';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Footer from './Footer';
+import Checkout from './Checkout';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route path ="/welcome">
           <Welcome />
+        </Route>
+        <Route path ="/checkout">
+          <Checkout />
         </Route>
       </Switch>
       <Footer />

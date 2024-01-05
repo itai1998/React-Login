@@ -10,7 +10,7 @@ function BasicExample() {
   return (
     <Navbar expand="lg" className="navbar navbar-expand navbar-dark bg-dark">
       <div className='container-fluid' >
-        <Navbar.Brand href="#home"> <CiShop size="1.5em" color="#ffc107" /> eShop</Navbar.Brand>
+        <Navbar.Brand href="/welcome"> <CiShop size="1.5em" color="#ffc107" /> eShop</Navbar.Brand>
         <div className="input-group">
           <input type="text" className="form-control" placeholder="Search ..." aria-label="Recipient's username" aria-describedby="basic-addon2" />
           <div className="input-group-append">
@@ -28,7 +28,7 @@ function BasicExample() {
               <small>Your</small> 
               <strong>Shop</strong>
             </Nav.Link>
-            <Nav.Link href="#link">
+            <Nav.Link href="/checkout">
               <LuShoppingCart className='text-white ms-1' /> <span className='text-white ms-2'>0</span>
             </Nav.Link>
           </Nav>
