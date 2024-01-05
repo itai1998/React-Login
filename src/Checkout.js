@@ -1,4 +1,5 @@
 import CheckoutProduct from "./CheckoutProduct";
+import Subtotal from "./Subtotal";
 const Checkout = () => {
     return ( 
         <div className="container-fluid">
@@ -10,7 +11,7 @@ const Checkout = () => {
                     <CheckoutProduct />
                 </div>
                 <div className="col-3">
-                    <h2>Cart</h2>
+                    <Subtotal />
                 </div>
             </div>
         </div>
