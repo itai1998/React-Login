@@ -4,6 +4,7 @@ import BasicExample from './BasicExample';
 import Welcome from './Welcome';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Welcome />
         </Route>
       </Switch>
+      <Footer />
     </div>
     </Router>
   );
