@@ -1,4 +1,5 @@
 import React from 'react';
+import Products from './Products';
 
 
 const Welcome = () => {
@@ -13,13 +14,30 @@ const Welcome = () => {
       style={{ objectFit: "cover" }}
       />
       </div>
-
       <div className="products bg-light">
-        <div className="w-50 p-2">
-
+        <div className="p-3 d-flex">
+          <div className="w-50 p-2 bg-white m-2">
+            <Products />
+          </div>
+          <div className="w-50 p-2 bg-white m-2">
+            <Products />
+          </div>
         </div>
-        <div className="w-50 p-2">
-
+        <div className="p-3 d-flex">
+          <div className="p-2 bg-white m-2">
+            <Products />
+          </div>
+          <div className="p-2 bg-white m-2">
+            <Products />
+          </div>
+          <div className="p-2 bg-white m-2">
+            <Products />
+          </div>
+        </div>
+        <div className="p-3">
+          <div className="p-2 bg-white m-2 d-flex justify-content-center">
+            <Products />
+          </div>
         </div>
       </div>
     </div>
