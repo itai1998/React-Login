@@ -16,7 +16,7 @@ const Welcome = () => {
       </div>
       <div className="products bg-light">
         <div className="p-3 d-flex">
-          <div className="w-50 p-2 bg-white m-2">
+          <div className="w-50 p-2 bg-white m-2 col">
             <Products
             id={1}
             title = {"Mac Book M3 Pro"}
@@ -25,7 +25,7 @@ const Welcome = () => {
             price = {1800}
             />
           </div>
-          <div className="w-50 p-2 bg-white m-2">
+          <div className="w-50 p-2 bg-white m-2 col">
             <Products
             id={2}
             title = {"Water Bottle"}
@@ -36,7 +36,7 @@ const Welcome = () => {
           </div>
         </div>
         <div className="p-3 d-flex">
-          <div className="p-2 bg-white m-2">
+          <div className="p-2 bg-white m-2 col">
             <Products
             id={3}
             title = {"Apple Watch"}
@@ -45,7 +45,7 @@ const Welcome = () => {
             price = {890}
             />
           </div>
-          <div className="p-2 bg-white m-2">
+          <div className="p-2 bg-white m-2 col">
             <Products
             id={4}
             title = {"Gaming Chair"}
@@ -54,7 +54,7 @@ const Welcome = () => {
             price = {120}
             />
           </div>
-          <div className="p-2 bg-white m-2">
+          <div className="p-2 bg-white m-2 col">
             <Products
             id={5}
             title = {"Headphone"}
@@ -65,7 +65,7 @@ const Welcome = () => {
           </div>
         </div>
         <div className="p-3">
-          <div className="p-2 bg-white m-2 d-flex justify-content-center">
+          <div className="p-2 bg-white m-2 d-flex justify-content-center col">
             <Products
             id={6}
             title = {"T-Shirt"}
